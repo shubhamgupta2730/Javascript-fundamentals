@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .bg-body {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body class="bg-body">
+    <div class="parent">
+      <div class="child">MOnday</div>
+      <div class="child">Tuesday</div>
+      <div class="child">wednesday</div>
+      <div class="child">Thursday</div>
+    </div>
+  </body>
+
+  <script>
+    const parent = document.querySelector(".parent");
+    console.log(parent);
+    console.log(parent.children)  //returns html collection of all the child elements.
+    console.log(parent.children[1].innerHTML);
+    
+    //for accessing all the elements at once, applying for loop for that. 
+    for (let i = 0; i < parent.children.length; i++) {
+      console.log(parent.children[i].innerHTML);
+    }
+
+    //for changing style of second child element
+    parent.children[1].style.color = "orange";
+
+    //for accessing first child  element: 
+    console.log(parent.firstElementChild);
+
+     //for accessing last child  element: 
+     console.log(parent.lastElementChild);
+
+
+     //for moving from child to parent: 
+    const dayOne = document.querySelector('.child')
+
+    console.log(dayOne)
+
+    console.log(dayOne.parentElement); //goes to parent class of this class.
+
+    console.log(dayOne.nextElementSibling); //goes to next class element. of same className. 
+    console.log("NODES: ", parent.childNodes) //shows all the nodes in the document model. 
+
+    
+
+
+
+
+
+  </script>
+</html>
