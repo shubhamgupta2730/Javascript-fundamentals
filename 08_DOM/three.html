@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bg-body {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+<body class="bg-body">
+  
+</body>
+<script>
+ const div =  document.createElement('div')
+ console.log(div)
+
+ div.className= "main"
+
+ div.id = Math.round(Math.random()*10+1) //setting random id
+
+ div.setAttribute("title", "generate title")
+
+div.style.backgroundColor= 'green'
+div.style.padding = "12px"
+
+//to add text to the div: approach1: 
+div.innerText  = "dom manipulation"
+
+//approach 2: 
+const addText = document.createTextNode("dom manipulation 2 ")
+div.appendChild(addText)
+
+//now to view div in window , we have to attach it to the document modeL : 
+document.body.appendChild(div)
+</script>
+</html>
